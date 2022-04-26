@@ -4,5 +4,10 @@
              x:Class="ecuadorTuristico.App">
     <Application.Resources>
 
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#F5A000"></Setter>
+            <Setter Property="BarTextColor" Value="White"></Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

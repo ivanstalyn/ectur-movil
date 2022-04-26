@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="using:ecuadorTuristico"
+             Padding="0,30,0,0"
+             x:Class="ecuadorTuristico.Master"
+             Title="Master"
+             BackgroundColor="#F5B041">
+    <StackLayout>
+        <Label Text="Ecuador Turistico" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="25" TextColor="#fff"/>
+        <ListView x:Name="listView" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:ItemPage}">
+                    <local:ItemPage Title="Inicio" IconSource="house.png" TargetType="{x:Type local:HomePage}" />
+                    <local:ItemPage Title="Busqueda" IconSource="lupa.png" TargetType="{x:Type local:Search}" />
+                    <local:ItemPage Title="Historial" IconSource="archive.png" TargetType="{x:Type local:Record}" />
+                    <local:ItemPage Title="Perfil" IconSource="profile.png" TargetType="{x:Type local:Profile}" />
+                </x:Array>
+            </ListView.ItemsSource>
+  
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" FontSize="20" FontAttributes="Bold" TextColor="#fff"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnLogout" Text="Cerrar Sesion" Clicked="btnLogout_Clicked" Margin="45, 20" 
+                Background="#F5A000" TextColor="#fff" FontSize="16" FontAttributes="Bold" CornerRadius="35" 
+                BorderColor="#fff" BorderWidth="3" Image="logout.png"/>
+    </StackLayout>
+</ContentPage>
