@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ecuadorTuristico.Views.Loggin"
+             BackgroundImageSource="fondo1.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ecuador Turístico" FontSize="40" FontAttributes="Bold" TextColor="#fff" HorizontalTextAlignment="Center"
+                   Margin="0, 120, 0, 10"/>
+            <Button x:Name="btnLoggin" Text="Iniciar Sesion con Facebook" ImageSource="fb.png" 
+                    BorderColor="#fff" BorderWidth="3" CornerRadius="15" Margin="40" VerticalOptions="EndAndExpand"
+                    Padding="10" BackgroundColor="#3b5998" TextColor="#fff" FontSize="16" FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

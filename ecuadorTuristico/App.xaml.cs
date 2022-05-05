@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ecuadorTuristico.Views;
 
 namespace ecuadorTuristico
 {
@@ -11,7 +12,7 @@ namespace ecuadorTuristico
         {
             InitializeComponent();
 
-            MainPage = new ecuadorTuristico.MainPage();
+            MainPage = new Loggin();
         }
 
         protected override void OnStart()
