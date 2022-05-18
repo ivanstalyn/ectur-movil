@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ecuadorTuristico.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,15 @@ namespace ecuadorTuristico.Views
 
         private async void btnLoggin_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            if (String.IsNullOrWhiteSpace(txtEmail.Text) || String.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                var msj = "Complete los Campos";
+                DependencyService.Get<MessageT>().LongAlert(msj);
+            }
+            else
+            {
+                await Navigation.PushAsync(new MainPage());
+            }
         }
 
         private async void btnCreateAccount_Clicked(object sender, EventArgs e)
