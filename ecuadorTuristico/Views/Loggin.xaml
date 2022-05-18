@@ -6,10 +6,20 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Ecuador Turístico" FontSize="40" FontAttributes="Bold" TextColor="#fff" HorizontalTextAlignment="Center"
-                   Margin="0, 120, 0, 10"/>
-            <Button x:Name="btnLoggin" Text="Iniciar Sesion con Facebook" ImageSource="fb.png" 
-                    BorderColor="#fff" BorderWidth="3" CornerRadius="15" Margin="40" VerticalOptions="EndAndExpand"
-                    Padding="10" BackgroundColor="#3b5998" TextColor="#fff" FontSize="16" FontAttributes="Bold"/>
+                   Margin="0, 120, 0, 100"/>
+            <Entry x:Name="txtEmail" Margin="30, 10" Placeholder="Correo..." PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                   TextColor="White" FontAttributes="Bold" FontSize="22"/>
+            <Entry x:Name="txtPassword" Margin="30, 10" Placeholder="Contraseña..." PlaceholderColor="White" BackgroundColor="#00ffffff"
+                   TextColor="White" FontAttributes="Bold" FontSize="22"/>
+            
+            <Button x:Name="btnLoggin" Text="Iniciar Sesion" 
+                    BorderColor="#fff" BorderWidth="3" CornerRadius="15" Margin="60, 0"
+                    Padding="7" BackgroundColor="#F5A000" TextColor="#fff" FontSize="15" FontAttributes="Bold" 
+                    Clicked="btnLoggin_Clicked"/>
+            <Button x:Name="btnCreateAccount" Text="Crear Cuenta" 
+                    BorderColor="#fff" BorderWidth="3" CornerRadius="15" Margin="60, 20"
+                    Padding="7" BackgroundColor="#F5A000" TextColor="#fff" FontSize="15" FontAttributes="Bold"
+                    Clicked="btnCreateAccount_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

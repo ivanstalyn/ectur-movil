@@ -22,7 +22,7 @@ namespace ecuadorTuristico
             var respuestaLogout = await DisplayAlert("Aviso!!", "Seguro desea cerrar sesion?", "Si", "No");
             if (respuestaLogout)
             {
-                System.Environment.Exit(0);
+                await Navigation.PopAsync();
             }
         }
     }

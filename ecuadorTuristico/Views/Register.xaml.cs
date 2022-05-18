@@ -10,22 +10,22 @@ using Xamarin.Forms.Xaml;
 namespace ecuadorTuristico.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Loggin : ContentPage
+    public partial class Register : ContentPage
     {
-        public Loggin()
+        public Register()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 
-        private async void btnLoggin_Clicked(object sender, EventArgs e)
+        private void btnRegister_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            DisplayAlert("AVISO", "Cuenta creada correctamente", "OK");
         }
 
-        private async void btnCreateAccount_Clicked(object sender, EventArgs e)
+        private async void btnReturn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Register(), false);
+            await Navigation.PopAsync(false);
         }
     }
 }

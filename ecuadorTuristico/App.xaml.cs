@@ -12,7 +12,7 @@ namespace ecuadorTuristico
         {
             InitializeComponent();
 
-            MainPage = new Loggin();
+            MainPage = new NavigationPage( new Loggin());
         }
 
         protected override void OnStart()

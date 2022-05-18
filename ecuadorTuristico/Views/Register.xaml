@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ecuadorTuristico.Views.Register"
+             BackgroundImageSource="fondo1.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registro" TextColor="White" FontAttributes="Bold" FontSize="30"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="txtUser" Margin="30, 10" Placeholder="Ingrese un Usuario" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                   TextColor="White" FontAttributes="Bold" FontSize="18"/>
+            <Entry x:Name="txtEmail" Margin="30, 10" Placeholder="Ingrese un Correo" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                   TextColor="White" FontAttributes="Bold" FontSize="18"/>
+            <Entry x:Name="txtPassword" Margin="30, 10" Placeholder="Ingrese una contraseña" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                   TextColor="White" FontAttributes="Bold" FontSize="18"/>
+            <Entry x:Name="txtConfirmPassword" Margin="30, 10" Placeholder="Confirme la contraseña" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                   TextColor="White" FontAttributes="Bold" FontSize="18"/>
+
+
+            <Button x:Name="btnRegister" Text="Registarse" 
+                    BorderColor="#fff" BorderWidth="3" CornerRadius="15" Margin="60, 0"
+                    Padding="7" BackgroundColor="#F5A000" TextColor="#fff" FontSize="15" FontAttributes="Bold" 
+                    Clicked="btnRegister_Clicked"/>
+            <Button x:Name="btnReturn" Text="Regresar" Margin="60, 0, 60, 60"
+                    Padding="7" BackgroundColor="#00ffffff" TextColor="White" FontSize="20" FontAttributes="Bold" 
+                    Clicked="btnReturn_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
