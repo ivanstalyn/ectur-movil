@@ -5,20 +5,20 @@
              Title="Inicio">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout Padding="10">
                 <ListView x:Name="ListProducts" RowHeight="300" ItemSelected="ProductSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout BackgroundColor="#eee">
+                                <StackLayout BackgroundColor="#fff">
                                     <StackLayout>
                                         <Image Source="{Binding Foto}" 
                                                    HeightRequest="200" WidthRequest="300" HorizontalOptions="Center"/>
                                         <Label Text="{Binding Nombre}"
-                                            TextColor="#f35e20" />
-                                        <Label Text="Valor:"
+                                            TextColor="#f35e20" FontSize="20"/>
+                                        <Label Text="Valor:" FontSize="18"
                                             TextColor="#503026" />
-                                        <Label Text="{Binding Precio}"
+                                        <Label Text="{Binding Precio, StringFormat=\{0\}$}" FontSize="18"
                                             TextColor="#503026" />
                                     </StackLayout>
                                 </StackLayout>

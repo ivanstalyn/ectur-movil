@@ -3,12 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ecuadorTuristico.Views.AcquireProduct">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Adquirir Producto" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
-            <Label Text="Producto:"/>
-            <Entry x:Name="TxtNombre" FontSize="17" IsEnabled="False"/>
-            <Label Text="Descripcion:"/>
-            <Entry x:Name="TxtDescripcion" FontSize="17"/>
+        <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Reservar Paquete" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"
+                   TextColor="#F5A000"/>
+            <Image x:Name="ImageProduct" WidthRequest="200" HeightRequest="250"/>
+            <Label x:Name="lblNombre" FontSize="20" FontAttributes="Bold"/>
+            <Label Text="Descripcion:" FontAttributes="Bold" FontSize="18"/>
+            <Label x:Name="lblDescripcion" FontSize="16"/>
+            <Label Text="Precio:" FontAttributes="Bold" FontSize="18"/>
+            <Label x:Name="lblPrecio" FontSize="16"/>
+            <Label Text="Fecha de Inicio del Paquete:" FontAttributes="Bold" FontSize="18"/>
+            <Label x:Name="lblFchInicio" FontSize="16"/>
+            <Label Text="Ficha de Fin del Paquete:" FontAttributes="Bold" FontSize="18"/>
+            <Label x:Name="lblFchFin" FontSize="16"/>
+            <Button x:Name="BtnReversar" Text="Reservar" Clicked="BtnReversar_Clicked" Margin="100, 0" BackgroundColor="#F5A000" 
+                    FontAttributes="Bold" FontSize="18" TextColor="White" CornerRadius="20"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

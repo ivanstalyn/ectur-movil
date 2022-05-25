@@ -11,7 +11,7 @@ namespace ecuadorTuristico.Models
         public string Descripcion { get; set; }
         public string Precio { get; set; }
         public string Foto { get; set; }
-        public string FechaInicio { get; set; }
-        public string FechaFin { get; set; }
+        public string FechaInicioEvento { get; set; }
+        public string FechaFinalEvento { get; set; }
     }
 }

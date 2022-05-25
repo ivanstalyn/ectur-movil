@@ -45,12 +45,17 @@ namespace ecuadorTuristico
         private void ProductSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var Obj = (Produtcs)e.SelectedItem;
-            var item = Obj.Id.ToString();
-            var item1 = Obj.Nombre.ToString();
-            int ID = Convert.ToInt32(item);
+            var id = Obj.Id.ToString();
+            var nombre = Obj.Nombre.ToString();
+            var precio = Obj.Precio.ToString();
+            var descripcion = Obj.Descripcion.ToString();
+            var fchInicio = Obj.FechaInicioEvento.ToString();
+            var fchFin = Obj.FechaFinalEvento.ToString();
+            var image = Obj.Foto.ToString();
+            int ID = Convert.ToInt32(id);
             try
             {
-                Navigation.PushAsync(new AcquireProduct(ID, item1));
+                Navigation.PushAsync(new AcquireProduct(ID, nombre, precio, descripcion, fchInicio, fchFin, image));
             }
             catch (Exception)
             {

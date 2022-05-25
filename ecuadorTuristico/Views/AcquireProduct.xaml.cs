@@ -13,11 +13,22 @@ namespace ecuadorTuristico.Views
     public partial class AcquireProduct : ContentPage
     {
         public int IdProduct;
-        public AcquireProduct(int Id, string nombre)
+        public string urlImage;
+        public AcquireProduct(int Id, string nombre, string precio, string descripcion, string fchInicio, string fchFin, string image)
         {
             InitializeComponent();
             IdProduct = Id;
-            TxtNombre.Text = nombre;
+            ImageProduct.Source = image;
+            lblNombre.Text = nombre;
+            lblDescripcion.Text = descripcion;
+            lblPrecio.Text = precio;
+            lblFchInicio.Text = fchInicio;
+            lblFchFin.Text = fchFin;
+        }
+
+        private void BtnReversar_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
