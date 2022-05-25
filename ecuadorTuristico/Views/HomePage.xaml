@@ -4,10 +4,29 @@
              x:Class="ecuadorTuristico.HomePage"
              Title="Inicio">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Pagina de Inicio"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <ListView x:Name="ListProducts" RowHeight="300" ItemSelected="ProductSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="#eee">
+                                    <StackLayout>
+                                        <Image Source="{Binding Foto}" 
+                                                   HeightRequest="200" WidthRequest="300" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Nombre}"
+                                            TextColor="#f35e20" />
+                                        <Label Text="Valor:"
+                                            TextColor="#503026" />
+                                        <Label Text="{Binding Precio}"
+                                            TextColor="#503026" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

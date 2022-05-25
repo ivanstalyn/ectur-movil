@@ -34,8 +34,8 @@
                     <Entry Grid.Column="1" Grid.Row="5" x:Name="TxtUsuario" IsEnabled="False"/>
                     <Label Grid.Column="0" Grid.Row="6" Text="Correo: " Padding="10" FontSize="16"/>
                     <Entry Grid.Column="1" Grid.Row="6" x:Name="TxtCorreo" IsEnabled="False"/>
-                    <Label Grid.Column="0" Grid.Row="7" Text="Edad: " Padding="10" FontSize="16"/>
-                    <Entry Grid.Column="1" Grid.Row="7" x:Name="TxtEdad" Keyboard="Numeric"/>
+                    <Label Grid.Column="0" Grid.Row="7" Text="Contraseña: " Padding="10" FontSize="16"/>
+                    <Entry Grid.Column="1" Grid.Row="7" x:Name="TxtPassword" Keyboard="Numeric"/>
                     <Button Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" x:Name="BtnActualizar" Text="Actualizar" />
                 </Grid>
             </StackLayout>

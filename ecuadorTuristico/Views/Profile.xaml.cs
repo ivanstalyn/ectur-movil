@@ -23,14 +23,14 @@ namespace ecuadorTuristico
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
-                await DisplayAlert("No Camera", ":( No camera available.", "OK");
+                await DisplayAlert("No Camera", "No camera available.", "OK");
                 return;
             }
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
             {
                 Directory = "Sample",
-                Name = "test.jpg",
+                Name = "PhotoProfil.jpg",
                 SaveToAlbum = true,
                 CompressionQuality = 75,
                 CustomPhotoSize = 50,
@@ -49,6 +49,15 @@ namespace ecuadorTuristico
                 var stream = file.GetStream();
                 return stream;
             });
+
+            var x = file.GetStream();
+            var bytes = new byte[x.Length];
+            await x.ReadAsync(bytes, 0, (int)x.Length);
+            string base64 = System.Convert.ToBase64String(bytes);
+
+
+
+
         }
 
         private async void BtnSubirFoto_Clicked(object sender, EventArgs e)

@@ -12,7 +12,6 @@
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:ItemPage}">
                     <local:ItemPage Title="Inicio" IconSource="house.png" TargetType="{x:Type local:HomePage}" />
-                    <local:ItemPage Title="Busqueda" IconSource="lupa.png" TargetType="{x:Type local:Search}" />
                     <local:ItemPage Title="Historial" IconSource="archive.png" TargetType="{x:Type local:Record}" />
                     <local:ItemPage Title="Perfil" IconSource="profile.png" TargetType="{x:Type local:Profile}" />
                 </x:Array>

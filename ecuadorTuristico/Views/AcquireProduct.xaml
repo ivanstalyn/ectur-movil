@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ecuadorTuristico.Views.AcquireProduct">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Adquirir Producto" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
+            <Label Text="Producto:"/>
+            <Entry x:Name="TxtNombre" FontSize="17" IsEnabled="False"/>
+            <Label Text="Descripcion:"/>
+            <Entry x:Name="TxtDescripcion" FontSize="17"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
