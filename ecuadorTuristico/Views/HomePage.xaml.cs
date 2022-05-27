@@ -36,7 +36,7 @@ namespace ecuadorTuristico
             if(response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                var res = JsonConvert.DeserializeObject<List<Produtcs>>(content);
+                var res = JsonConvert.DeserializeObject<List<producto>>(content);
 
                 ListProducts.ItemsSource = res;
             }
@@ -44,14 +44,14 @@ namespace ecuadorTuristico
 
         private void ProductSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var Obj = (Produtcs)e.SelectedItem;
-            var id = Obj.Id.ToString();
-            var nombre = Obj.Nombre.ToString();
-            var precio = Obj.Precio.ToString();
-            var descripcion = Obj.Descripcion.ToString();
-            var fchInicio = Obj.FechaInicioEvento.ToString();
-            var fchFin = Obj.FechaFinalEvento.ToString();
-            var image = Obj.Foto.ToString();
+            var Obj = (producto)e.SelectedItem;
+            var id = Obj.id.ToString();
+            var nombre = Obj.nombre.ToString();
+            var precio = Obj.precio.ToString();
+            var descripcion = Obj.descripcion.ToString();
+            var fchInicio = Obj.fechaInicioEvento.ToString();
+            var fchFin = Obj.fechaFinalEvento.ToString();
+            var image = Obj.foto.ToString();
             int ID = Convert.ToInt32(id);
             try
             {

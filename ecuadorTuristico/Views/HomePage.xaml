@@ -12,13 +12,13 @@
                             <ViewCell>
                                 <StackLayout BackgroundColor="#fff">
                                     <StackLayout>
-                                        <Image Source="{Binding Foto}" 
+                                        <Image Source="{Binding foto}" 
                                                    HeightRequest="200" WidthRequest="300" HorizontalOptions="Center"/>
-                                        <Label Text="{Binding Nombre}"
+                                        <Label Text="{Binding nombre}"
                                             TextColor="#f35e20" FontSize="20"/>
                                         <Label Text="Valor:" FontSize="18"
                                             TextColor="#503026" />
-                                        <Label Text="{Binding Precio, StringFormat=\{0\}$}" FontSize="18"
+                                        <Label Text="{Binding precio, StringFormat=$\{0\}}" FontSize="18"
                                             TextColor="#503026" />
                                     </StackLayout>
                                 </StackLayout>

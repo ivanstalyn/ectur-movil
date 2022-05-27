@@ -5,39 +5,45 @@
              Title="Perfil">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Label  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Perfil del Usuario" FontSize="20" FontAttributes="Bold" TextColor="Black"
-                            HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="Foto de Perfil:" FontSize="18" FontAttributes="Bold" 
-                           HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Image Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" x:Name="ImageProfile" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand"/>
-                    <Button Grid.Column="0" Grid.Row="3" x:Name="BtnTomarFoto" Text="Tomar Foto" Padding="0" FontSize="12" Clicked="BtnTomarFoto_Clicked"/>
-                    <Button Grid.Column="1" Grid.Row="3" x:Name="BtnSubirFoto" Text="Subir Foto" Padding="0" FontSize="12" Clicked="BtnSubirFoto_Clicked"/>
-                    <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Text="Datos:" FontSize="18" FontAttributes="Bold" 
-                           HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Grid.Column="0" Grid.Row="5" Text="Usuario: " Padding="10" FontSize="16"/>
-                    <Entry Grid.Column="1" Grid.Row="5" x:Name="TxtUsuario" IsEnabled="False"/>
-                    <Label Grid.Column="0" Grid.Row="6" Text="Correo: " Padding="10" FontSize="16"/>
-                    <Entry Grid.Column="1" Grid.Row="6" x:Name="TxtCorreo" IsEnabled="False"/>
-                    <Label Grid.Column="0" Grid.Row="7" Text="Contraseña: " Padding="10" FontSize="16"/>
-                    <Entry Grid.Column="1" Grid.Row="7" x:Name="TxtPassword" Keyboard="Numeric"/>
-                    <Button Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" x:Name="BtnActualizar" Text="Actualizar" />
-                </Grid>
+            <StackLayout Padding="10">
+                <!--Campos-->
+                <Label Text="Perfil del Usuario" FontSize="20" FontAttributes="Bold" TextColor="Black"
+                            HorizontalOptions="Center"/>
+                    <!--Imagen Perfil-->
+                    <Label Text="Foto de Perfil:" FontSize="18" FontAttributes="Bold" 
+                           HorizontalOptions="Center"/>
+                    <Image x:Name="ImageProfile" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand"/>
+                    <Button x:Name="BtnTomarFoto" Text="Tomar Foto" Padding="0" Margin="80, 0" FontSize="12" Clicked="BtnTomarFoto_Clicked"/>
+                    <Button x:Name="BtnSubirFoto" Text="Subir Foto" Padding="0" Margin="80, 0" FontSize="12" Clicked="BtnSubirFoto_Clicked"/>
+                    <Label Text="Datos" FontSize="18" FontAttributes="Bold" 
+                           HorizontalOptions="Center"/>
+                    <!--Campo User-->
+                    <Label Text="Usuario: " Padding="10" FontSize="16"/>
+                    <Entry x:Name="TxtUsuario" IsEnabled="False"/>
+                    <!--Campo Correo-->
+                    <Label Text="Correo: " Padding="10" FontSize="16"/>
+                    <Entry x:Name="TxtCorreo" IsEnabled="False"/>
+                    <!--Campo Password-->
+                    <Label Text="Contraseña: " Padding="10" FontSize="16"/>
+                    <Entry x:Name="TxtPassword"/>
+                    <!--Campo Nombres-->
+                    <Label Text="Nombres: " Padding="10" FontSize="16"/>
+                    <Entry x:Name="TxtNombre"/>
+                    <!--Campo Apellidos-->
+                    <Label Text="Apellidos: " Padding="10" FontSize="16"/>
+                    <Entry x:Name="TxtApellido"/>
+                    <!--Campo Telefono-->
+                    <Label Text="Telefono: " Padding="10" FontSize="16"/>
+                    <Entry x:Name="TxtTelefono"/>
+                    <!--Campo Cedula-->
+                    <Label Text="Cedula: " Padding="10" FontSize="16"/>
+                    <Entry x:Name="TxtCedula"/>
+                    <!--Campo FechaNac-->
+                    <Label Text="Fecha de Nacimiento: " Padding="10" FontSize="16"/>
+                    <Entry x:Name="TxtFechaNac"/>
+
+                <!--Boton Actualizar-->
+                <Button x:Name="BtnActualizar" Text="Actualizar" Margin="80, 10"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

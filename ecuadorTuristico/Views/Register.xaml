@@ -16,25 +16,25 @@
 
                     <Entry x:Name="TxtUser" Margin="30, 10" Placeholder="Ingrese un Usuario" PlaceholderColor="White" BackgroundColor="#00ffffff" 
                    TextColor="White" FontAttributes="Bold" FontSize="18"/>
-                    <Entry x:Name="TxtEmail" Margin="30, 10" Placeholder="Ingrese un Correo" PlaceholderColor="White" BackgroundColor="#00ffffff" 
-                   TextColor="White" FontAttributes="Bold" FontSize="18"/>
+                    <Entry x:Name="TxtEmail" Margin="30, 10" Placeholder="Ingrese un correo electrónico" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                   TextColor="White" FontAttributes="Bold" FontSize="18" Keyboard="Email"/>
                     <Entry x:Name="TxtPassword" Margin="30, 10" Placeholder="Ingrese una contraseña" PlaceholderColor="White" BackgroundColor="#00ffffff" 
                    TextColor="White" FontAttributes="Bold" FontSize="18"/>
                     <Entry x:Name="TxtConfirmPassword" Margin="30, 10" Placeholder="Confirme la contraseña" PlaceholderColor="White" BackgroundColor="#00ffffff" 
                    TextColor="White" FontAttributes="Bold" FontSize="18"/>
-                    <Entry x:Name="TxtNombres" Margin="30, 10" Placeholder="Ingrese sus Nombre" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                    <Entry x:Name="TxtNombres" Margin="30, 10" Placeholder="Ingrese sus nombres" PlaceholderColor="White" BackgroundColor="#00ffffff" 
                    TextColor="White" FontAttributes="Bold" FontSize="18"/>
-                    <Entry x:Name="TxtApellidos" Margin="30, 10" Placeholder="Ingrese sus Apellidos" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                    <Entry x:Name="TxtApellidos" Margin="30, 10" Placeholder="Ingrese sus apellidos" PlaceholderColor="White" BackgroundColor="#00ffffff" 
                    TextColor="White" FontAttributes="Bold" FontSize="18"/>
-                    <Entry x:Name="TxtIdentificacion" Margin="30, 10" Placeholder="Ingrese Cedula" PlaceholderColor="White" BackgroundColor="#00ffffff" 
-                   TextColor="White" FontAttributes="Bold" FontSize="18"/>
-                    <Entry x:Name="TxtTelefono" Margin="30, 10" Placeholder="Ingrese sus Telefono" PlaceholderColor="White" BackgroundColor="#00ffffff" 
-                   TextColor="White" FontAttributes="Bold" FontSize="18"/>
+                    <Entry x:Name="TxtIdentificacion" Margin="30, 10" Placeholder="Ingrese su número de cedula" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                   TextColor="White" FontAttributes="Bold" FontSize="18" Keyboard="Numeric"/>
+                    <Entry x:Name="TxtTelefono" Margin="30, 10" Placeholder="Ingrese su número de celular" PlaceholderColor="White" BackgroundColor="#00ffffff" 
+                   TextColor="White" FontAttributes="Bold" FontSize="18" Keyboard="Numeric"/>
                     <Label Text="Fecha de Nacimiento:" TextColor="White" FontAttributes="Bold" FontSize="18" Margin="30, 0"/>
-                    <DatePicker x:Name="FechaNacimiento" MaximumDate="01/01/2004" BackgroundColor="#00ffffff" 
+                    <DatePicker x:Name="SelectFechaNacimiento" MaximumDate="01/01/2000" BackgroundColor="#00ffffff" 
                    TextColor="White" FontAttributes="Bold" FontSize="18" Margin="30, 0"/>
                     <Label Text="Seleccione su género:" TextColor="White" FontAttributes="Bold" FontSize="18" Margin="30, 0"/>
-                    <Picker x:Name="SelectGender" Title="Seleccione su genero" BackgroundColor="#00ffffff" 
+                    <Picker x:Name="SelectGender" BackgroundColor="#00ffffff"
                    TextColor="White" FontAttributes="Bold" FontSize="18" Margin="30, 0"/>
 
 
