@@ -4,10 +4,31 @@
              x:Class="ecuadorTuristico.Record"
              Title="Historial">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Historial de Compras"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <ListView x:Name="ListProducts" RowHeight="200">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="#fff">
+                                    <StackLayout>
+                                        <Label Text="{Binding nombreProducto}"
+                                            TextColor="#f35e20" FontSize="20"/>
+                                        <Label Text="Valor:" FontSize="18"
+                                            TextColor="#503026" />
+                                        <Label Text="{Binding precioProducto, StringFormat=$\{0\}}" FontSize="18"
+                                            TextColor="#503026" />
+                                        <Label Text="Descripcion:" FontSize="18"
+                                            TextColor="#503026" />
+                                        <Label Text="{Binding descripcionProducto}" FontSize="18"
+                                            TextColor="#503026" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

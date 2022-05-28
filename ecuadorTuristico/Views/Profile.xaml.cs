@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using ecuadorTuristico.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Plugin.Media;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,11 +19,12 @@ namespace ecuadorTuristico
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Profile : ContentPage
     {
-        public int id;
+        public string idUserP;
         public Profile()
         {
             InitializeComponent();
             ExtraerDatos();
+            idUserP = Preferences.Get("idUser", "1");
         }
 
         private async void BtnTomarFoto_Clicked(object sender, EventArgs e)
@@ -89,20 +92,65 @@ namespace ecuadorTuristico
         
         private async void ExtraerDatos()
         {
+            idUserP = Preferences.Get("idUser", "1");
+            string url = "http://ectur.php.ec/usuario/usuario/" + idUserP;
             var handler = new HttpClientHandler();
             var client = new HttpClient(handler);
-            string res = await client.GetStringAsync("http://ectur.php.ec/usuario/usuario/2");
+            string res = await client.GetStringAsync(url);
             var result = JObject.Parse(res);
             TxtUsuario.Text = result["username"].ToString();
-            TxtCorreo.Text = result["email"].ToString();
+            TxtEmail.Text = result["email"].ToString();
             TxtPassword.Text = result["password"].ToString();
-            TxtNombre.Text = result["nombres"].ToString();
-            TxtApellido.Text = result["apellidos"].ToString();
+            TxtNombres.Text = result["nombres"].ToString();
+            TxtApellidos.Text = result["apellidos"].ToString();
             TxtTelefono.Text = result["telefono"].ToString();
-            TxtCedula.Text = result["identificacion"].ToString();
+            TxtIdentificacion.Text = result["identificacion"].ToString();
             TxtFechaNac.Text = result["fechaNacimiento"].ToString();
             ImageProfile.Source = result["foto"].ToString();
         }
-        
+
+        private async void BtnActualizar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                //if(await ValidarFormulario())
+                //{
+                await DisplayAlert("AVISO", "Desea crear su cuenta?", "SI", "NO");
+                usuario user = new usuario
+                {
+                    username = TxtUsuario.Text,
+                    password = TxtPassword.Text,
+                    email = TxtEmail.Text,
+                    nombres = TxtNombres.Text,
+                    apellidos = TxtApellidos.Text,
+                    telefono = TxtTelefono.Text,
+                    identificacion = TxtIdentificacion.Text,
+                    fechaNacimiento = TxtFechaNac.Text,
+                    rol = new rol { id = 2 },//2
+                    genero = new genero { id = 5 },//5
+                    empresa = new empresa { id = 1 }//1
+                };
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("http://ectur.php.ec");
+                var json = JsonConvert.SerializeObject(user);
+                StringContent contentJson = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PutAsync("/usuario/actualizarUsuario/"+Convert.ToInt32(idUserP), contentJson);
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    await DisplayAlert("AVISO", "Datos actualizados correctamente", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("AVISO", "Error", "OK");
+                }
+
+                //}
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("ALERTA", ex.Message, "OK");
+            }
+
+        }
     }
 }

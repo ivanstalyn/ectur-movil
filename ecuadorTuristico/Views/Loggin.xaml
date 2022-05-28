@@ -7,10 +7,10 @@
         <StackLayout>
             <Label Text="Ecuador Turístico" FontSize="40" FontAttributes="Bold" TextColor="#fff" HorizontalTextAlignment="Center"
                    Margin="0, 120, 0, 100"/>
-            <Entry x:Name="txtEmail" Margin="30, 10" Placeholder="Usuario..." PlaceholderColor="White" BackgroundColor="#60000000" 
+            <Entry x:Name="TxtUsuario" Margin="30, 10" Placeholder="Usuario..." PlaceholderColor="White" BackgroundColor="#60000000" 
                    TextColor="White" FontAttributes="Bold" FontSize="22"/>
-            <Entry x:Name="txtPassword" Margin="30, 10" Placeholder="Contraseña..." PlaceholderColor="White" BackgroundColor="#60000000"
-                   TextColor="White" FontAttributes="Bold" FontSize="22"/>
+            <Entry x:Name="TxtPassword" Margin="30, 10" Placeholder="Contraseña..." PlaceholderColor="White" BackgroundColor="#60000000"
+                   TextColor="White" FontAttributes="Bold" FontSize="22" IsPassword="True"/>
             
             <Button x:Name="BtnLoggin" Text="Iniciar Sesion" 
                     BorderColor="#fff" BorderWidth="3" CornerRadius="15" Margin="60, 0"

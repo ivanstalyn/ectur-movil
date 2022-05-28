@@ -22,28 +22,28 @@
                     <Entry x:Name="TxtUsuario" IsEnabled="False"/>
                     <!--Campo Correo-->
                     <Label Text="Correo: " Padding="10" FontSize="16"/>
-                    <Entry x:Name="TxtCorreo" IsEnabled="False"/>
+                    <Entry x:Name="TxtEmail" IsEnabled="False"/>
                     <!--Campo Password-->
                     <Label Text="Contraseña: " Padding="10" FontSize="16"/>
                     <Entry x:Name="TxtPassword"/>
                     <!--Campo Nombres-->
                     <Label Text="Nombres: " Padding="10" FontSize="16"/>
-                    <Entry x:Name="TxtNombre"/>
+                    <Entry x:Name="TxtNombres"/>
                     <!--Campo Apellidos-->
                     <Label Text="Apellidos: " Padding="10" FontSize="16"/>
-                    <Entry x:Name="TxtApellido"/>
+                    <Entry x:Name="TxtApellidos"/>
                     <!--Campo Telefono-->
                     <Label Text="Telefono: " Padding="10" FontSize="16"/>
                     <Entry x:Name="TxtTelefono"/>
                     <!--Campo Cedula-->
                     <Label Text="Cedula: " Padding="10" FontSize="16"/>
-                    <Entry x:Name="TxtCedula"/>
+                    <Entry x:Name="TxtIdentificacion"/>
                     <!--Campo FechaNac-->
                     <Label Text="Fecha de Nacimiento: " Padding="10" FontSize="16"/>
                     <Entry x:Name="TxtFechaNac"/>
 
                 <!--Boton Actualizar-->
-                <Button x:Name="BtnActualizar" Text="Actualizar" Margin="80, 10"/>
+                <Button x:Name="BtnActualizar" Text="Actualizar" Margin="80, 10" Clicked="BtnActualizar_Clicked"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

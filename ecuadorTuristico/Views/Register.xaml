@@ -31,13 +31,8 @@
                     <Entry x:Name="TxtTelefono" Margin="30, 10" Placeholder="Ingrese su número de celular" PlaceholderColor="White" BackgroundColor="#00ffffff" 
                    TextColor="White" FontAttributes="Bold" FontSize="18" Keyboard="Numeric"/>
                     <Label Text="Fecha de Nacimiento:" TextColor="White" FontAttributes="Bold" FontSize="18" Margin="30, 0"/>
-                    <DatePicker x:Name="SelectFechaNacimiento" MaximumDate="01/01/2000" BackgroundColor="#00ffffff" 
+                    <Entry x:Name="TxtFchNac" Placeholder="1900-01-311" BackgroundColor="#00ffffff" 
                    TextColor="White" FontAttributes="Bold" FontSize="18" Margin="30, 0"/>
-                    <Label Text="Seleccione su género:" TextColor="White" FontAttributes="Bold" FontSize="18" Margin="30, 0"/>
-                    <Picker x:Name="SelectGender" BackgroundColor="#00ffffff"
-                   TextColor="White" FontAttributes="Bold" FontSize="18" Margin="30, 0"/>
-
-
                     <Button x:Name="BtnRegister" Text="Registarse" 
                     BorderColor="#fff" BorderWidth="3" CornerRadius="15" Margin="60, 0"
                     Padding="7" BackgroundColor="#F5A000" TextColor="#fff" FontSize="15" FontAttributes="Bold" 

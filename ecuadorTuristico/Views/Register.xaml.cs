@@ -21,14 +21,6 @@ namespace ecuadorTuristico.Views
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-            var GenderList = new List<string>
-            {
-                "Masculino",
-                "Femenino",
-                "Otros"
-            };
-            SelectGender.ItemsSource = GenderList;
-
         }
 
         private async Task<bool> ValidarFormulario()
@@ -70,9 +62,9 @@ namespace ecuadorTuristico.Views
         private async void BtnRegister_Clicked(object sender, EventArgs e)
         {
             try{
-                //if(await ValidarFormulario())
-                //{
-                    await DisplayAlert("AVISO", "Desea crear su cuenta??", "SI", "NO");
+                if(await ValidarFormulario())
+                {
+                    await DisplayAlert("AVISO", "Desea crear su cuenta?", "SI", "NO");
                     usuario user = new usuario {
                         username = TxtUser.Text,
                         password = TxtPassword.Text,
@@ -81,9 +73,9 @@ namespace ecuadorTuristico.Views
                         apellidos = TxtApellidos.Text,
                         telefono = TxtTelefono.Text,
                         identificacion = TxtIdentificacion.Text,
-                        fechaNacimiento = "1998-01-01",
+                        fechaNacimiento = TxtFchNac.Text,
                         rol = new rol { id = 2 },//2
-                        genero = new genero { id = 1},                       
+                        genero = new genero { id = 3},//3                       
                         empresa = new empresa { id = 1}//1
                     };
 
@@ -101,7 +93,7 @@ namespace ecuadorTuristico.Views
                     await DisplayAlert("AVISO", "Error", "OK");
                 }
                 
-                //}
+                }
             }
             catch(Exception ex){
                 await DisplayAlert("ALERTA", ex.Message, "OK");
